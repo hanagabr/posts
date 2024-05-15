@@ -807,8 +807,8 @@ Posts            </h2>
                <td><?php echo $content ?></td>
                <td><?php echo $created_at ?></td>
                <td><a href="delete.php?id=<?php echo $id ?>" onclick="return confirm('Are you sure you want to delete?')" >    ❌</a></td>
-               <td><a href="editpost.php?id=<?php echo $id ?>">   ✍</a></td>
-               <td><a href="postdetails.php?id=<?php echo $id ?>">   💌</a></td>
+               <td><a href="editpost.php?id=<?php echo $id ?>"> ✍</a></td>
+               <td><a href="postdetails.php?id=<?php echo $id ?>">💌</a></td>
 
              </tr>
 

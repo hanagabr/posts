@@ -1,37 +1,38 @@
 <?php
 
 include_once("includes/conn.php");
-
 $status = false;
 
 if(isset($_GET["id"])){
     $id = $_GET["id"];
 	$status = true;
+
+	
 }elseif($_SERVER["REQUEST_METHOD"] ==="POST"){
-	$status = true;
+	      $status = true;
 			// read inputs
 			$id = $_POST["id"];
 			$title = $_POST["title"];
 			$content = $_POST["content"];
+
 			// update data 
-			$sql = "UPDATE `posts` SET `title`=?,`content`=? WHERE id =?";
+			$sql = "UPDATE `posts` SET `title`=?, `content`=?  WHERE id =?";
 			$stmt = $conn->prepare($sql);
 			$stmt->execute([$title, $content, $id]);
 			echo "updated Successfully";
 		}	
 	
-	//if($status){
+	if($status){
 		// show data for the car on the form
 		try{
 			// get data for the required post
 			$sql = "SELECT * FROM `posts` WHERE id = ?";
 			$stmt = $conn->prepare($sql);
 			$stmt->execute([$id]);
-			$row = $stmt->fetch();
-			$title = $row["title"];
-			$content = $row["content"];
-			
-		}
+			foreach($stmt->fetchAll() as $row){
+				$title = $row["title"];
+			    $content = $row["content"];	
+		}}
 
 	catch(PDOException $e){
 		echo "Can't get car data: " . $e->getMessage();
@@ -67,18 +68,23 @@ if(isset($_GET["id"])){
 				<div class="form-group mb-3 row"><label for="content4" class="col-md-5 col-form-label">Content</label>
 					<div class="col-md-7"><textarea class="form-control form-control-lg" id="content4" name="content" required><?php echo $content ?></textarea></div>
 				</div> 
-      </div>
-	  <?php
+             </div>
+	                         <?php
 								}
 							?>
 
 				<hr class="my-4" />
 				<div class="form-group mb-3 row"><label for="insert10" class="col-md-5 col-form-label"></label>
-					<div class="col-md-7"><button class="btn btn-primary btn-lg" type="submit">edit</button></div>
+					<div class="col-md-7"><button class="btn btn-primary btn-lg" type="submit">Edit</button></div>
 				</div>
 			</form>
 		</div>
-		
+		<?php
+		}else{
+			echo "Invalid request";
+		}
+	?>
+
 	</body>
 
 </html>
