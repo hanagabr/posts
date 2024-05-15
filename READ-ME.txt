@@ -1,0 +1,12 @@
+  =>  Template Name    : posts template
+
+  =>  Template Link    : https://windmill-dashboard.vercel.app/forms.html
+
+  =>  Template License : https://themewagon.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : HTML Estevan Maito
+
+  =>  Author Website   : https://themewagon.com
+
+
+  
