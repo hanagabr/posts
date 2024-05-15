@@ -6,7 +6,12 @@
 
   =>  Template Author  : HTML Estevan Maito
 
-  =>  Author Website   : https://themewagon.com
-
+  =>  Author Website   : https://themewagon.compre
+preparation
+i install visual studio code 
+install xampp
+create db in myserver
+create table 
+make crud operations using php language and mysql query
 
   
