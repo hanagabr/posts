@@ -2,6 +2,7 @@
 
 include_once("includes/conn.php");
 $status = false;
+$id = ["id"];
 
 if(isset($_GET["id"])){
     $id = $_GET["id"];
@@ -67,6 +68,8 @@ if(isset($_GET["id"])){
 				<hr class="bg-transparent border-0 py-1" />
 				<div class="form-group mb-3 row"><label for="content4" class="col-md-5 col-form-label">Content</label>
 					<div class="col-md-7"><textarea class="form-control form-control-lg" id="content4" name="content" required><?php echo $content ?></textarea></div>
+					<input type="hidden" name="id" value="<?php echo $id ?>">
+
 				</div> 
              </div>
 	                         <?php

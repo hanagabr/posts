@@ -95,7 +95,7 @@ try{
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/posts"
+                href="postsview.php"
               >
                 <svg
                   class="w-5 h-5"
@@ -170,13 +170,14 @@ try{
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
-                    <a class="w-full" href="pages/create-account.html">
-                      Create account
+                    <a class="w-full" href="addpost.php">
+                      Add Post
                     </a>
                   </li>
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
+                    href="addpost.php"
+>
                     <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
                     </a>
@@ -195,14 +196,6 @@ try{
               </template>
             </li>
           </ul>
-          <div class="px-6 my-6">
-            <button
-              class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-            >
-              Create account
-              <span class="ml-2" aria-hidden="true">+</span>
-            </button>
-          </div>
         </div>
       </aside>
       <!-- Mobile sidebar -->
@@ -914,9 +907,18 @@ Posts            </h2>
                   </nav>
                 </span>
               </div>
+
             </div>
           </div>
-        </main>
+          <hr class="my-4" />
+				<div class="form-group mb-3 row"><label for="insert10" class="col-md-5 col-form-label"></label>
+					<div class="col-md-7"><a href="addpost.php" class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple"
+           type="submit">Add Post</a> 
+
+          </div>
+
+        </div>
+       </main>
       </div>
     </div>
   </body>
