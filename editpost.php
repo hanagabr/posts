@@ -20,7 +20,7 @@ if(isset($_GET["id"])){
 			$sql = "UPDATE `posts` SET `title`=?, `content`=?  WHERE id =?";
 			$stmt = $conn->prepare($sql);
 			$stmt->execute([$title, $content, $id]);
-			echo "updated Successfully";
+			//echo "updated Successfully";
 		}	
 	
 	if($status){

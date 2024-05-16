@@ -14,4 +14,12 @@
     }else{
         echo "Invalid request";
     }
+
+
+    
+
+    header("Location: postsview.php");
+exit; // Make sure to exit to prevent further execution
+
+
 ?>
